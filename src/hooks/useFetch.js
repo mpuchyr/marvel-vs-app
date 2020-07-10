@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import md5 from 'md5'
+import React, { useState, useEffect } from 'react';
+import md5 from 'md5';
 
 
 function useFetch (letter) {
@@ -12,21 +12,28 @@ function useFetch (letter) {
     let hash = md5(timeStamp + privateKey + publicKey)
     let fullUrl = charsUrl + `?nameStartsWith=${letter}&limit=100&ts=${timeStamp}&apikey=${publicKey}&hash=${hash}`
 
-    fetch(fullUrl)
-    .then(res => {
-    if (res.status !== 200) {
-        throw new Error(res.status.text)
-    } else {
-        return res.json()
+    const [characters, setCharacters] = useState([])
+    
+    async function fetchData() {
+        const res = await fetch(fullUrl)
+            .then(res => {
+                if (res.status !== 200) {
+                    throw new Error(res.status.text)
+                } else {
+                    let chars = res.json()
+                    console.log(chars)
+                    setCharacters(chars)
+                }
+            })
+            .catch(err => console.log(err))
     }
-    })
-    .then(info => {
-        console.log(info)
-        this.setState({
-            characters: info.data.results
-        })
-    })
-    .catch(err => console.log(err))
+
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+
+    return [characters]
 }
 
 export default useFetch
