@@ -13,19 +13,14 @@ function useFetch (letter) {
     let fullUrl = charsUrl + `?nameStartsWith=${letter}&limit=100&ts=${timeStamp}&apikey=${publicKey}&hash=${hash}`
 
     const [characters, setCharacters] = useState([])
-    
+
     async function fetchData() {
         const res = await fetch(fullUrl)
-            .then(res => {
-                if (res.status !== 200) {
-                    throw new Error(res.status.text)
-                } else {
-                    let chars = res.json()
-                    console.log(chars)
-                    setCharacters(chars)
-                }
-            })
+        res
+            .json()
+            .then(res => setCharacters(res))
             .catch(err => console.log(err))
+              
     }
 
     useEffect(() => {
