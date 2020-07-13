@@ -3,34 +3,15 @@ import md5 from 'md5';
 import useFetch from '../hooks/useFetch'
 
 function Characters() {
-    const [charactersA] = useFetch('a')
-    const [charactersB] = useFetch('b')
-    // const publicKey = process.env.REACT_APP_API_KEY
-    // const privateKey = process.env.REACT_APP_API_PRIVATE_KEY
-    // const url = "https://gateway.marvel.com/"
-    // const charsUrl = url + 'v1/public/characters'
 
-    // let letter = 'a'
-    // let timeStamp = Date.now()
-    // let hash = md5(timeStamp + privateKey + publicKey)
-    // let fullUrl = charsUrl + `?nameStartsWith=${letter}&limit=100&ts=${timeStamp}&apikey=${publicKey}&hash=${hash}`
- 
+    const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-    // const [characters, setCharacters] = useState([])
+    let randLetterOne = alphabet[Math.floor(Math.random() * alphabet.length)]
+    let randLetterTwo = alphabet[Math.floor(Math.random() * alphabet.length)]
 
-    // async function fetchData() {
-    //     const res = await fetch(fullUrl)
-    //     res
-    //         .json()
-    //         .then(res => setCharacters(res))
-    //         .catch(err => console.log(err))
-              
-    // }
-
-    // useEffect(() => {
-    //     fetchData()
-    // }, [])
-
+    const [charactersA] = useFetch(randLetterOne)
+    const [charactersB] = useFetch(randLetterTwo)
+    
     function showCharacters () {
         console.log(charactersA)
         console.log(charactersA.length)
