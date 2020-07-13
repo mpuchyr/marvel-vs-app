@@ -3,7 +3,8 @@ import md5 from 'md5';
 import useFetch from '../hooks/useFetch'
 
 function Characters() {
-    const [characters] = useFetch('a')
+    const [charactersA] = useFetch('a')
+    const [charactersB] = useFetch('b')
     // const publicKey = process.env.REACT_APP_API_KEY
     // const privateKey = process.env.REACT_APP_API_PRIVATE_KEY
     // const url = "https://gateway.marvel.com/"
@@ -31,7 +32,10 @@ function Characters() {
     // }, [])
 
     function showCharacters () {
-        console.log(JSON.stringify(characters))
+        console.log(charactersA)
+        console.log(charactersA.length)
+        console.log(charactersB)
+        console.log(charactersB.length)
     }
 
     return (

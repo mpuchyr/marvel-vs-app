@@ -18,7 +18,7 @@ function useFetch (letter) {
         const res = await fetch(fullUrl)
         res
             .json()
-            .then(res => setCharacters(res))
+            .then(res => setCharacters(res.data.results))
             .catch(err => console.log(err))
               
     }
