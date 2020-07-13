@@ -11,7 +11,10 @@ function Characters() {
 
     const [charactersA] = useFetch(randLetterOne)
     const [charactersB] = useFetch(randLetterTwo)
-    
+
+    let charOne = charactersA[Math.floor(Math.random() * charactersA.length)]
+    let charTwo = charactersB[Math.floor(Math.random() * charactersB.length)]
+
     function showCharacters () {
         console.log(charactersA)
         console.log(charactersA.length)
@@ -19,9 +22,15 @@ function Characters() {
         console.log(charactersB.length)
     }
 
+    function showSingleCharacters () {
+        console.log(charOne)
+        console.log(charTwo)
+    }
+
     return (
         <div>
             <button onClick={() => showCharacters()}>Characters</button>
+            <button onClick={() => showSingleCharacters()}>Single Characters</button>
         </div>
     )
 }
