@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import md5 from 'md5';
+import React from 'react';
 import useFetch from '../hooks/useFetch'
+import DisplayCharacter from './DisplayCharacter'
 
 function Characters() {
 
@@ -31,6 +31,8 @@ function Characters() {
         <div>
             <button onClick={() => showCharacters()}>Characters</button>
             <button onClick={() => showSingleCharacters()}>Single Characters</button>
+            <DisplayCharacter character={charOne} />
+            <DisplayCharacter character={charTwo} />
         </div>
     )
 }
