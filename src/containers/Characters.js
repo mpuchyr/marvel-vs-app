@@ -43,7 +43,12 @@ function Characters() {
     }
 
     function addWinningCharacter (char) {
-        setWinningChars([...winningChars, char])
+        if (winningChars.includes(char) !== true) {
+            setWinningChars([...winningChars, char])
+        } else {
+            setWinningChars([...winningChars])
+        }
+
         console.log(winningChars)
     }
 
