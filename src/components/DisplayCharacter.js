@@ -8,7 +8,7 @@ function DisplayCharacter(props) {
 
         return (
             <div>
-                <img src={charImg} alt="character image"/>
+                <img src={charImg} alt={props.character.name}/>
                 <h1>{props.character.name}</h1>
             </div>
         )
