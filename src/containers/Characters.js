@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import useFetch from '../hooks/useFetch'
 import DisplayCharacter from '../components/DisplayCharacter'
+import DisplayWinningCharacters from '../components/DisplayWinningCharacters'
 
 function Characters() {
     const [winningChars, setWinningChars] = useState([])
@@ -48,6 +49,7 @@ function Characters() {
 
     return (
         <div>
+            <DisplayWinningCharacters characters={winningChars} />
             <button onClick={() => showCharacters()}>Characters</button>
             <button onClick={() => showSingleCharacters()}>Single Characters</button>
             <div onClick={() => addWinningCharacter(charOne)}>
