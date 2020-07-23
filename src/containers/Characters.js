@@ -1,9 +1,8 @@
 import React from 'react';
 import useFetch from '../hooks/useFetch'
-import DisplayCharacter from './DisplayCharacter'
+import DisplayCharacter from '../components/DisplayCharacter'
 
 function Characters() {
-
     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     let badImg = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
 
