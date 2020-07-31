@@ -19,7 +19,7 @@ function Characters() {
 
     let charOne = charactersA[Math.floor(Math.random() * charactersA.length)]
     if (charOne) {
-        while (charOne.thumbnail.path === badImg && !winningChars.includes(charOne) && !losingChars.includes(charOne)) {
+        while (charOne.thumbnail.path === badImg || winningChars.includes(charOne) || losingChars.includes(charOne)) {
             charOne = charactersA[Math.floor(Math.random() * charactersA.length)]
         }
     }
@@ -27,7 +27,7 @@ function Characters() {
 
     let charTwo = charactersB[Math.floor(Math.random() * charactersB.length)]
     if (charTwo) {
-        while (charTwo.thumbnail.path === badImg && !winningChars.includes(charTwo) && !losingChars.includes(charTwo)) {
+        while (charTwo.thumbnail.path === badImg || winningChars.includes(charTwo) || losingChars.includes(charTwo)) {
             charTwo = charactersB[Math.floor(Math.random() * charactersB.length)]
         }
     }
