@@ -56,9 +56,9 @@ function Characters() {
 
     function addLosingCharacter (char) {
         if (losingChars.includes(char) !== true) {
-            setWinningChars([...losingChars, char])
+            setLosingChars([...losingChars, char])
         } else {
-            setWinningChars([...losingChars])
+            setLosingChars([...losingChars])
         }
         console.log(losingChars)
     }
