@@ -5,6 +5,7 @@ import DisplayWinningCharacters from '../components/DisplayWinningCharacters'
 
 function Characters() {
     const [winningChars, setWinningChars] = useState([])
+    const [losingChars, setLosingChars] = useState([])
     
     const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
     let badImg = "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available"
@@ -50,6 +51,15 @@ function Characters() {
         }
 
         console.log(winningChars)
+    }
+
+    function addLosingCharacter (char) {
+        if (losingChars.includes(char) !== true) {
+            setWinningChars([...losingChars, char])
+        } else {
+            setWinningChars([...losingChars])
+        }
+        console.log(losingChars)
     }
 
     return (
