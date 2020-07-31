@@ -19,7 +19,7 @@ function Characters() {
 
     let charOne = charactersA[Math.floor(Math.random() * charactersA.length)]
     if (charOne) {
-        while (charOne.thumbnail.path === badImg) {
+        while (charOne.thumbnail.path === badImg && !winningChars.includes(charOne) && !losingChars.includes(charOne)) {
             charOne = charactersA[Math.floor(Math.random() * charactersA.length)]
         }
     }
@@ -27,7 +27,7 @@ function Characters() {
 
     let charTwo = charactersB[Math.floor(Math.random() * charactersB.length)]
     if (charTwo) {
-        while (charTwo.thumbnail.path === badImg) {
+        while (charTwo.thumbnail.path === badImg && !winningChars.includes(charTwo) && !losingChars.includes(charTwo)) {
             charTwo = charactersB[Math.floor(Math.random() * charactersB.length)]
         }
     }
@@ -65,6 +65,7 @@ function Characters() {
 
     return (
         <div>
+            <h2>Winning Team</h2>
             <DisplayWinningCharacters characters={winningChars} />
             <button onClick={() => showCharacters()}>Characters</button>
             <button onClick={() => showSingleCharacters()}>Single Characters</button>
@@ -80,6 +81,7 @@ function Characters() {
             }}>
                 <DisplayCharacter character={charTwo} />
             </div>
+            <h2>Losing Team</h2>
             <DisplayLosingCharacters characters={losingChars} />
 
         </div>
