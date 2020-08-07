@@ -71,18 +71,21 @@ function Characters() {
             </div>
             <button onClick={() => showCharacters()}>Characters</button>
             <button onClick={() => showSingleCharacters()}>Single Characters</button>
-            <div onClick={() => {
-                addWinningCharacter(charOne)
-                addLosingCharacter(charTwo)    
-            }}>
-                <DisplayCharacter character={charOne} />
+            <div className="char-main">
+                <div onClick={() => {
+                    addWinningCharacter(charOne)
+                    addLosingCharacter(charTwo)    
+                }}>
+                    <DisplayCharacter character={charOne} />
+                </div>
+                <div onClick={() => {
+                    addWinningCharacter(charTwo)
+                    addLosingCharacter(charOne)
+                }}>
+                    <DisplayCharacter character={charTwo} />
+                </div>
             </div>
-            <div onClick={() => {
-                addWinningCharacter(charTwo)
-                addLosingCharacter(charOne)
-            }}>
-                <DisplayCharacter character={charTwo} />
-            </div>
+
             <h2>Losing Team</h2>
             <div className="losing-chars">
                 <DisplayLosingCharacters characters={losingChars} />
