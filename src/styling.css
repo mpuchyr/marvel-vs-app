@@ -7,7 +7,23 @@
   margin: 5px; }
 
 .char-main {
-  width: 100%;
-  display: grid; }
+  width: 60%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  grid-template-rows: 100%;
+  grid-template-areas: "char-one vs char-two"; }
+
+#char-one {
+  grid-area: char-one; }
+
+#char-one img {
+  width: 500px; }
+
+#char-two {
+  grid-area: char-two; }
+
+#char-two img {
+  width: 500px; }
 
 /*# sourceMappingURL=styling.css.map */
