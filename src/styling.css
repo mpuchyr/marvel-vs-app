@@ -1,7 +1,13 @@
 .winning-char-img {
-  width: 250px; }
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  overflow: hidden; }
 
 .losing-char-img {
-  width: 250px; }
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+  overflow: hidden; }
 
 /*# sourceMappingURL=styling.css.map */
