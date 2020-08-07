@@ -6,4 +6,8 @@
   width: 250px;
   margin: 5px; }
 
+.char-main {
+  width: 100%;
+  display: grid; }
+
 /*# sourceMappingURL=styling.css.map */

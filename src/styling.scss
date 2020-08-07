@@ -11,3 +11,7 @@
     @include char-list-width();
 }
 
+.char-main {
+    width: 100%;
+    display: grid;
+}
