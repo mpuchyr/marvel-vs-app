@@ -1,0 +1,11 @@
+@mixin char-list-width {
+    width: 250px;
+}
+
+.winning-char-img {
+    @include char-list-width();
+}
+
+.losing-char-img {
+    @include char-list-width();
+}
