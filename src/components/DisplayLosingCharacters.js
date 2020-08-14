@@ -8,6 +8,7 @@ function DisplayLosingCharacters (props) {
         const charId = char.id
         return (
             <div className="losing-char">
+                <span className="losing-char-span">X</span>
                 <img className="losing-char-img" src={charImg} alt={charName} key={charId}/>
                  
             </div>

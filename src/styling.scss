@@ -8,9 +8,12 @@
 }
 
 .losing-char-img {
-    @include char-list-width();
+    // @include char-list-width();
+    height: 250px;
+    width: 100%;
     filter: grayscale(100%);
     opacity: 0.4;
+    margin: auto;
 
 }
 
@@ -45,5 +48,14 @@
     overflow: hidden;
     float: left;
     margin: 5px;
+    justify-content: center;;
 }
 
+.losing-char-span {
+    color: red;
+    position: absolute;
+    width: 250px;
+    font-size: 200px;
+    z-index: 2;
+    justify-content: center;
+}
