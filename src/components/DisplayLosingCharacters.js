@@ -1,4 +1,5 @@
 import React from 'react';
+import LosingCharacterOverlay from './LosingCharacterOverlay';
 
 function DisplayLosingCharacters (props) {
     return props.characters.map(char => {
@@ -6,7 +7,11 @@ function DisplayLosingCharacters (props) {
         const charName = char.name
         const charId = char.id
         return (
-            <img className="losing-char-img" src={charImg} alt={charName} key={charId}/>   
+            <>
+                <LosingCharacterOverlay />
+                <img className="losing-char-img" src={charImg} alt={charName} key={charId}/>  
+            </>
+            
         )
     })
 }
