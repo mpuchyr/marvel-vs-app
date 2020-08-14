@@ -1,12 +1,14 @@
 .winning-char-img {
-  width: 250px; }
+  height: 250px;
+  width: 100%;
+  margin: auto; }
 
 .losing-char-img {
   height: 250px;
   width: 100%;
+  margin: auto;
   filter: grayscale(100%);
-  opacity: 0.4;
-  margin: auto; }
+  opacity: 0.4; }
 
 .char-main {
   width: 60%;
@@ -27,6 +29,14 @@
 
 #char-two img {
   width: 500px; }
+
+.winning-char {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  float: left;
+  margin: 5px;
+  justify-content: center; }
 
 .losing-char {
   width: 250px;

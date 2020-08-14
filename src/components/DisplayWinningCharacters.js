@@ -6,7 +6,10 @@ function DisplayWinningCharacters(props) {
         const charName = char.name
         const charId = char.id
         return (
-            <img className="winning-char-img" src={charImg} alt={charName} key={charId}/>
+            <div className="winning-char">
+                <img className="winning-char-img" src={charImg} alt={charName} key={charId}/>
+            </div>
+            
         )
     })
 }

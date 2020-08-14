@@ -1,19 +1,28 @@
-@mixin char-list-width {
-    width: 250px;
+@mixin char-list-imgs {
+    height: 250px;
+    width: 100%;
+    margin: auto;
     // margin: 5px;
 }
 
+@mixin char-portraits-in-list {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    float: left;
+    margin: 5px;
+    justify-content: center;
+}
+
 .winning-char-img {
-    @include char-list-width();
+    @include char-list-imgs();
 }
 
 .losing-char-img {
-    // @include char-list-width();
-    height: 250px;
-    width: 100%;
+    @include char-list-imgs();
     filter: grayscale(100%);
     opacity: 0.4;
-    margin: auto;
+
 
 }
 
@@ -42,13 +51,14 @@
     width: 500px;
 }
 
+
+
+.winning-char {
+    @include char-portraits-in-list();
+}
+
 .losing-char {
-    width: 250px;
-    height: 250px;
-    overflow: hidden;
-    float: left;
-    margin: 5px;
-    justify-content: center;;
+    @include char-portraits-in-list();
 }
 
 .losing-char-span {
