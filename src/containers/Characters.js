@@ -78,6 +78,11 @@ function Characters() {
                 }}>
                     <DisplayCharacter character={charOne} />
                 </div>
+                
+                <div className="vs-container">
+                    <h1 id="vs">VS</h1>
+                </div>
+                
                 <div id="char-two" onClick={() => {
                     addWinningCharacter(charTwo)
                     addLosingCharacter(charOne)
