@@ -7,7 +7,7 @@ function DisplayCharacter(props) {
         const charImg = props.character.thumbnail.path + '.' + props.character.thumbnail.extension
 
         return (
-            <div>
+            <div className="large-char-img-container">
                 <img src={charImg} alt={props.character.name}/>
                 <h1>{props.character.name}</h1>
             </div>

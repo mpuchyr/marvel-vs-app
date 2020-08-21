@@ -22,13 +22,13 @@
   grid-area: char-one; }
 
 #char-one img {
-  width: 500px; }
+  width: 100%; }
 
 #char-two {
   grid-area: char-two; }
 
 #char-two img {
-  width: 500px; }
+  width: 100%; }
 
 .winning-chars {
   width: 1300px;
@@ -82,5 +82,9 @@
   width: 255%;
   transform: rotate(-42deg);
   z-index: -1; }
+
+.large-char-img-container {
+  vertical-align: center;
+  margin: auto; }
 
 /*# sourceMappingURL=styling.css.map */

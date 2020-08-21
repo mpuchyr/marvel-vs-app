@@ -40,7 +40,7 @@
 }
 
 #char-one img {
-    width: 500px;
+    width: 100%;
 }
 
 #char-two {
@@ -48,7 +48,7 @@
 }
 
 #char-two img {
-    width: 500px;
+    width: 100%;
 }
 
 @mixin char-teams {
@@ -107,4 +107,9 @@
 .lineTwo {
     @include losing-lines(-100px, 40px, -42deg);
     z-index: -1;
+}
+
+.large-char-img-container {
+    vertical-align: center;
+    margin: auto;
 }
