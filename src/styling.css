@@ -32,16 +32,26 @@
   transform: translate(-50%, -50%); }
 
 #char-one {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
   grid-area: char-one; }
 
-#char-one img {
-  width: 100%; }
+.large-char-img-container {
+  height: 90%; }
+
+.large-char-img-container img {
+  height: 90%; }
 
 #char-two {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
   grid-area: char-two; }
-
-#char-two img {
-  width: 100%; }
 
 .winning-chars {
   width: 1300px;
@@ -95,9 +105,5 @@
   width: 255%;
   transform: rotate(-42deg);
   z-index: -1; }
-
-.large-char-img-container {
-  vertical-align: center;
-  margin: auto; }
 
 /*# sourceMappingURL=styling.css.map */

@@ -50,21 +50,36 @@
     transform: translate(-50%, -50%);
 }
 
-#char-one {
-    grid-area: char-one;
+@mixin char-settings {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
 }
 
-#char-one img {
-    width: 100%;
+#char-one {
+    @include char-settings();
+    grid-area: char-one;
+
+
 }
+
+.large-char-img-container {
+    height: 90%;
+}
+
+.large-char-img-container img {
+    height: 90%;
+}
+
 
 #char-two {
+    @include char-settings();
     grid-area: char-two;
+
 }
 
-#char-two img {
-    width: 100%;
-}
 
 @mixin char-teams {
     width: 1300px;
@@ -124,7 +139,3 @@
     z-index: -1;
 }
 
-.large-char-img-container {
-    vertical-align: center;
-    margin: auto;
-}
