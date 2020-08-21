@@ -28,7 +28,7 @@
 
 .char-main {
     width: 60%;
-    margin: 0 auto;
+    margin: 10px auto;
     display: grid;
     grid-template-columns: 40% 20% 40%;
     grid-template-rows: 100%;
@@ -51,10 +51,24 @@
     width: 500px;
 }
 
+@mixin char-teams {
+    width: 1300px;
+    margin: 0 auto 10px auto;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
 
+.winning-chars {
+    @include char-teams();
+}
 
 .winning-char {
     @include char-portraits-in-list();
+}
+
+.losing-chars {
+    @include char-teams();
 }
 
 .losing-char {

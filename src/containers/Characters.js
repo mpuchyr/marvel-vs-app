@@ -64,13 +64,13 @@ function Characters() {
     }
 
     return (
-        <div>
+        <div className="main">
             <h2>Winning Team</h2>
             <div className="winning-chars">
                 <DisplayWinningCharacters characters={winningChars} />
             </div>
-            <button onClick={() => showCharacters()}>Characters</button>
-            <button onClick={() => showSingleCharacters()}>Single Characters</button>
+            {/* <button onClick={() => showCharacters()}>Characters</button>
+                <button onClick={() => showSingleCharacters()}>Single Characters</button> */}
             <div className="char-main">
                 <div id="char-one" onClick={() => {
                     addWinningCharacter(charOne)
