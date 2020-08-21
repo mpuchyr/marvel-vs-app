@@ -61,11 +61,36 @@
     @include char-portraits-in-list();
 }
 
-.losing-char-span {
+// .losing-char-span {
+//     color: red;
+//     position: absolute;
+//     width: 250px;
+//     font-size: 200px;
+//     z-index: 2;
+//     justify-content: center;
+// }
+
+.losing-char-hr-1 {
     color: red;
-    position: absolute;
-    width: 250px;
-    font-size: 200px;
-    z-index: 2;
-    justify-content: center;
+    height: 250px;
+    width: 100px;
+    transform: rotate(45deg);
+}
+
+@mixin losing-lines ($left-pos, $top-pos, $rotate){
+    position: relative;
+    left: $left-pos;
+    top: $top-pos;
+    border-top: 10px solid red;
+    width: 255%;
+    transform: rotate($rotate);
+}
+
+.lineOne {
+    @include losing-lines(-300px, 40px, 42deg);
+}
+
+.lineTwo {
+    @include losing-lines(-100px, 40px, -42deg);
+    z-index: -1;
 }
