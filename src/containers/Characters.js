@@ -96,7 +96,10 @@ function Characters() {
             )
         } else {
             return (
-                <h1>Game Over</h1>
+                <>
+                    <h1>Game Over</h1>
+                    <button onClick={() => window.location.reload(false)}>Play Again?</button>
+                </>
             )
         }
     }
