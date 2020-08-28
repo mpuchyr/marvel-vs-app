@@ -43,7 +43,8 @@
   height: 90%; }
 
 .large-char-img-container img {
-  height: 90%; }
+  height: 90%;
+  cursor: pointer; }
 
 #char-two {
   position: relative;
