@@ -73,6 +73,34 @@ function Characters() {
         }
     }
 
+    function displayMainVs (winningCharLength) {
+        if (winningCharLength < 5) {
+            return (
+                <>
+                    <div id="char-one" onClick={() => {
+                        addCharacters(charOne, charTwo)  
+                    }}>
+                        <DisplayCharacter character={charOne} />
+                    </div>
+                    
+                    <div className="vs-container">
+                        <h1 id="vs">VS</h1>
+                    </div>
+                    
+                    <div id="char-two" onClick={() => {
+                        addCharacters(charTwo, charOne)
+                    }}>
+                        <DisplayCharacter character={charTwo} />
+                    </div>
+                </>
+            )
+        } else {
+            return (
+                <h1>Game Over</h1>
+            )
+        }
+    }
+
     return (
         <div className="main">
             <h2>Winning Team</h2>
@@ -80,22 +108,9 @@ function Characters() {
                 <DisplayWinningCharacters characters={winningChars} />
             </div>
             <div className="char-main">
-                <div id="char-one" onClick={() => {
-                    addCharacters(charOne, charTwo)  
-                }}>
-                    <DisplayCharacter character={charOne} />
-                </div>
-                
-                <div className="vs-container">
-                    <h1 id="vs">VS</h1>
-                </div>
-                
-                <div id="char-two" onClick={() => {
-                    addCharacters(charTwo, charOne)
-                }}>
-                    <DisplayCharacter character={charTwo} />
-                </div>
+                {displayMainVs(winningChars.length)}
             </div>
+            
 
             <h2>Losing Team</h2>
             <div className="losing-chars">
